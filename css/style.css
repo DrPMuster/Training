@@ -35,6 +35,7 @@ body {
 header{
 	background-color:#222222;
 	padding:16px 0;
+	width:100%;
 }
 
 .header__content{
@@ -76,10 +77,17 @@ header{
 	align-items: center;
 }
 
+.search__form {
+	margin:0 0 0 10%;
+    border: none;
+    outline: none;
+    transition:0.5s;
+    opacity: 0;
+}
 
-
-.search__form{
-	display:none;
+.search:hover .search__form {
+    padding: 5px 10px;
+    opacity: 1;
 }
 
 .title{
@@ -274,9 +282,23 @@ h6 {
 	margin:48px 0 0 0;
 }
 
+
+.docker-overlay{
+	position: absolute;
+
+	
+}
+
+
+
 .docker__block{
 	display:flex;
 	flex-direction: column;
+}
+
+.docker__image{
+	height: 420px;
+	
 }
 
 .docker__info{
@@ -287,6 +309,45 @@ h6 {
 
 .docker-margin{
 	margin:12px 0 0 0 ;
+}
+
+.docker__block img {
+    width: 100%;
+    display: block;
+    transition:0.8s;
+}
+.docker__block:hover img {
+    filter: brightness(0.4);
+}
+.docker__block:hover .docker-overlay {
+    opacity: 1;
+}
+.docker-overlay {
+	position: relative;
+	bottom: 55%;
+	left: 33%;
+	opacity: 0;
+}
+
+.cart {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid white; 
+	background-color:transparent;
+	color:white;
+	padding:13px;
+    cursor: pointer;
+}
+
+.cart:hover {
+    opacity: 0.7;
+}
+
+.cart-img{
+	width:26px;
+	height:23px;
+	padding: 0 5px 0 0;
 }
 
 .button-container{
@@ -304,6 +365,15 @@ h6 {
 	padding: 13px;
 }
 
+.browse:hover{
+	opacity:0.8;
+	transition:0.7s;
+	background-color: #F16D7F;
+}
+
+.browse:hover .small-text{
+	color:white;
+}
 
 
 .feauters{
@@ -337,25 +407,21 @@ h6 {
 
 
 .subscribe{
-	min-height: 448px;
 	background-image: url('/images/surf.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	display: flex;
-	align-items: center;
 }
 
 .subscribe__content{
-display: flex;
-justify-content: space-between;
-gap:550px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 450px;
 }
-
 
 .subscribe__face{
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: center;
 	width:225px;
 
@@ -405,6 +471,7 @@ footer{
 	background-color: #222224;
 }
 
+
 .brand{
 	color:#fbfbfb
 }
@@ -422,6 +489,35 @@ footer{
 	gap:7px;
 }
 
+.footer-btn{
+	cursor:pointer;
+	height: 32px;
+	width: 32px;
+	display: flex;
+	background-position: center;
+	background-size: cover;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-btn.img{
+	height: 24px;
+	width:24px;
+}
+
+.footer-btn:hover{
+	background-color: #F16D7F;
+}
+
+.hidden{
+	display:none;
+}
+
+
+
+
 /* 
 
 |_
@@ -430,7 +526,7 @@ footer{
 '-'
 
 */
-
+/* смартфоны */
 @media (max-width: 375px) {
 	.container {
 		max-width: 375px;
@@ -439,13 +535,14 @@ footer{
 	
 	.nav{
 		display: flex;
-		gap:34px;
+		gap:5%;
 		flex-direction: row-reverse;
 	}
 
-	.hidden-mobile{
-		display:none;
+	.title{
+		width:100%;
 	}
+
 
 	h1{
 		font-size: 38px;
@@ -454,11 +551,16 @@ footer{
 	h2{
 		font-size: 20px;
 	}
-
+	h6{
+		font-size: 12px;
+	}
+	.title{
+		grid-template-columns: 1fr;
+	}
 
 	.content__block{
-		width:375px;
-		height: 363px;
+		width:100%;
+		height: 100vh;
 		justify-content: center;
 	}
 
@@ -507,6 +609,9 @@ footer{
 		display:flex;
 		flex-direction: column;
 	}
+	.docker__image{
+		height: auto;
+	}
 
 	.feauters{
 		height: 610px;
@@ -517,41 +622,47 @@ footer{
 		flex-direction: column;
 	}
 	.subscribe{
-		height:610px;
-		display: flex;
-		justify-content: center;
+		width: 100%;
 	}
-	
 	.subscribe__content{
 		flex-direction: column;
 		align-items: center;
-		gap:59px;
+		justify-content: space-evenly;
 	}
-
+	
 	
 	.subscribe__face{
 		justify-content: center;
-		width:343px;
-		height:194px;
+		width:100%;
+		height:auto;
 	}
-
 	.subscribe__img{
-		height: 92px;
-		width:92px;
+		height: 62px;
+		width:62px;
 	}
-
+	.subscribe__subscribe{
+		width:100%;
+	}
+	.subscribe-form{
+		background-color: #e5e5e5; 
+		border-radius: 30px;
+		margin:10px 0 0 0;
 	
+	}
+	
+	.subscribe-form input {
+		padding: 10px 15px;
+		font-size: 12px;
+	}
+	
+	.submit{
+		padding: 10px 12px;
+	}
+	.hidden-mobile{
+		display:none;
+	}
 }  
-
-
-
-
-
-
-
-
-
-
+/* смартфоны и планшеты */
 @media (min-width:376px) and (max-width: 769px) {
 	.container {
 		max-width: 769px;
@@ -576,27 +687,19 @@ footer{
 		width:759px;
 		letter-spacing: 0%;
 	}
-	
-	.hidden-tab{
-		display:none;
-	}
-	.block__container{
-		margin:0 0 0 40px;
-	}
+
 	header{
 		padding:16px 32px;
 	}
 
 	.title{
-		width:769px;
-		height:368px;
+		width:100%;
+		height:100vh;
+		grid-template-columns: 1fr;
 	}
 
-	.title__container{
-		max-width: 384px;
-	}
-	.content_img{
-		max-height:384px;;
+	.content__block{
+		width: 100%;
 	}
 	.feauters__content{
 		flex-direction: column;
@@ -614,32 +717,27 @@ footer{
 	}
 	
 	.gallery__block{
+		display:flex;
 		justify-content: center;
-		width: 736px;
-		height: 303px;
-		gap:19px;
+		gap:32px;
 	}
-	.gallery{
-		display: flex;
-		justify-content: center;
-	}
-
+	
 	.gallery__card{
-		width:232px;
-		height:167px;
-		background-size: cover;
+		width:343px;
+		height:247px;
 	}
 
+	.gallery__card__long{
+		height:111px;
+		width:343px
+	}
 	.gallery__text{
-		top:55px;
+		position:relative;
+		top:110px;
 	}
 	.gallery__text__long{
+		position:relative;
 		top:35px;
-	}
-	.gallery__card__long{
-		width:734px;
-		height:116px;
-		background-size: cover;
 	}
 	.buy{
 		margin:154px 0 0 0;
@@ -648,24 +746,27 @@ footer{
 		gap:16px;
 		grid-template-columns:1fr 1fr;
 	}
+	.docker__image{
+		height: auto;
+	}
+
 	.flex-center{
 		display: flex;
 		justify-content: center;
 	}
 
 	.feauters{
+		width: 100%;
 		justify-content: center;
 	}
 
 	.subscribe{
-		width:768px;
-		height: 614px;
+		width: 100%;
 	}
 	.subscribe__content{
-		gap:48px;
 		flex-direction: column;
-		align-items: center;;
-		justify-content: center;
+		align-items: center;
+		justify-content: space-evenly;
 	}
 	.subscribe__img{
 		width:96px;
@@ -675,6 +776,57 @@ footer{
 	.footer__content{
 		padding:24px 0; 
 	}
+	.hidden-tab{
+		display:none;
+	}
+
+}
+
+/* Планшеты и маленькие ПК */
+@media (min-width:770px) and (max-width: 1599px) {
+	.container {
+		max-width: 1599px;
+		margin: 0 5%;
+	}
+	
+	.header{
+		padding:16px 5% 16px 5%;
+	}
+
+	.title{
+		width:100%;
+	}
+
+	.content_img{
+		max-width: 100%; 
+		padding:0 0 0 10%;
+	}
+
+	.gallery__card{
+		max-width:30%; 
+		background-position-x: center;
+	}
+	.docker__image{
+		height: auto;
+	}
+	.docker__info{
+		padding: 2%;
+	}
+
+	.gallery__card__long{
+		width: 100%;
+		background-repeat: repeat;
+	}
+	.hidden-tab2{
+		display:none;
+	}
 }
 
 
+/* Вопросы
+конфликт hidden-tab
+переместил вниз класс и заработало
+
+какая последовательность работы
+я для каждого медиа запроса одни и те же блоки переделываю каждый раз, вроде можно умнее?
+*/

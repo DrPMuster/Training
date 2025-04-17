@@ -1,0 +1,90 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing: border-box;
+}
+.container {
+	max-width: 1142px;
+	margin: 0 auto;
+}
+
+.docker{
+	margin:16px 48px;
+	gap:30px;
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	margin:48px 0 0 0;
+}
+
+
+
+
+
+
+.docker__block{
+	display:flex;
+	flex-direction: column;
+}
+
+.docker__image{
+	height: 420px;
+	
+}
+
+.docker__info{
+	height:162px;
+	background-color:#F8f8f8;
+	padding:24px 29px 20px 16px;
+}
+
+.docker-margin{
+	margin:12px 0 0 0 ;
+}
+
+.docker__block img {
+    width: 100%;
+    display: block;
+    transition:0.8s;
+}
+.docker__block:hover img {
+    filter: brightness(0.4);
+}
+.docker__block:hover .docker-overlay {
+    opacity: 1;
+}
+.docker-overlay {
+	position: relative;
+	bottom: 55%;
+	left: 33%;
+	opacity: 0;
+}
+
+.cart {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border: 1px solid white; 
+	background-color:transparent;
+	color:white;
+	padding:13px;
+    cursor: pointer;
+}
+
+.cart:hover {
+    opacity: 0.7;
+}
+
+.cart-img{
+	width:26px;
+	height:23px;
+	padding: 0 5px 0 0;
+}
+
+
+
+
+
