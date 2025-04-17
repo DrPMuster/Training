@@ -235,22 +235,22 @@ h6 {
 	width:1142px;
 }
 .women{
-	background-image: url('/images/women.png');
+	background-image: url('./images/women.png');
 	background-repeat: no-repeat;
 }
 
 .man{
-	background-image: url('/images/man.png');
+	background-image: url('./images/man.png');
 	background-repeat: no-repeat;
 }
 
 .kid{
-	background-image: url('/images/kid.png');
+	background-image: url('./images/kid.png');
 	background-repeat: no-repeat;
 }
 
 .shoe{
-	background-image: url('/images/shoe.png');
+	background-image: url('./images/shoe.png');
 	background-repeat: no-repeat;
 }
 
@@ -407,7 +407,7 @@ h6 {
 
 
 .subscribe{
-	background-image: url('/images/surf.png');
+	background-image: url('./images/surf.png');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
