@@ -302,7 +302,7 @@ h6 {
 }
 
 .docker__info{
-	height:162px;
+	min-height:162px;
 	background-color:#F8f8f8;
 	padding:24px 29px 20px 16px;
 }
@@ -345,8 +345,6 @@ h6 {
 }
 
 .cart-img{
-	width:26px;
-	height:23px;
 	padding: 0 5px 0 0;
 }
 
@@ -407,7 +405,7 @@ h6 {
 
 
 .subscribe{
-	background-image: "../images/surf.png";
+	background-image:  url("../images/surf.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -516,6 +514,13 @@ footer{
 }
 
 
+.footer-btn:hover svg{
+	path{
+		fill:white;
+	}
+}
+
+
 
 
 /* 
@@ -527,6 +532,164 @@ footer{
 
 */
 /* смартфоны */
+@media (max-width: 1599px) {
+	.container {
+		max-width: 1599px;
+		margin: 0 5%;
+	}
+	
+	.header{
+		padding:16px 5% 16px 5%;
+	}
+
+	.title{
+		width:100%;
+	}
+
+	.content_img{
+		max-width: 100%; 
+		padding:0 0 0 10%;
+	}
+
+	.gallery__card{
+		max-width:30%; 
+		background-position-x: center;
+	}
+	.docker__image{
+		height: auto;
+	}
+	.docker__info{
+		padding: 2%;
+	}
+
+	.gallery__card__long{
+		width: 100%;
+		background-repeat: repeat;
+	}
+	.hidden-tab2{
+		display:none;
+	}
+}
+/* смартфоны и планшеты */
+@media (max-width: 769px) {
+	.container {
+		max-width: 769px;
+		margin: 0 5%;
+	}
+
+	h1{
+		font-size: 44px;
+	}
+	blockquote{
+		font-size:20px;
+		width:359px;
+	}
+	h2{
+		font-size:24px;
+	}
+	.nowrap{
+		white-space: nowrap;
+	}
+
+	.maximum{
+		width:759px;
+		letter-spacing: 0%;
+	}
+
+	header{
+		padding:16px 32px;
+	}
+
+	.title{
+		width:100%;
+		height:100vh;
+		grid-template-columns: 1fr;
+	}
+
+	.content__block{
+		width: 100%;
+	}
+	.feauters__content{
+		flex-direction: column;
+		gap:48px;
+		width:360px;
+	}
+
+	.feauters{
+		width:769px;
+		height:610px;
+		background-color: #222224;
+		margin:64px 0 0 0;
+		display: flex;
+		align-items: center;
+	}
+	
+	.gallery__block{
+		display:flex;
+		justify-content: center;
+		gap:32px;
+	}
+	
+	.gallery__card{
+		min-width:343px;
+		min-height:247px;
+	}
+
+	.gallery__card__long{
+		height:111px;
+		width:343px
+	}
+	.gallery__text{
+		position:relative;
+		top:110px;
+	}
+	.gallery__text__long{
+		position:relative;
+		top:35px;
+	}
+	.buy{
+		margin:154px 0 0 0;
+	}
+	.docker{
+		gap:16px;
+		grid-template-columns:1fr 1fr;
+	}
+	.docker__image{
+		height: auto;
+	}
+
+	.flex-center{
+		display: flex;
+		justify-content: center;
+	}
+
+	.feauters{
+		width: 100%;
+		justify-content: center;
+	}
+
+	.subscribe{
+		width: 100%;
+	}
+	.subscribe__content{
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+	}
+	.subscribe__img{
+		width:96px;
+		height: 96px;
+	}
+
+	.footer__content{
+		padding:24px 0; 
+	}
+	.hidden-tab{
+		display:none;
+	}
+
+}
+/* Планшеты и маленькие ПК */
 @media (max-width: 375px) {
 	.container {
 		max-width: 375px;
@@ -560,10 +723,16 @@ footer{
 
 	.content__block{
 		width:100%;
-		height: 100vh;
+		min-height:calc(100vh - 70px);
 		justify-content: center;
 	}
-
+	
+	.gallery__block{
+		display:flex;
+		justify-content:flex-start;
+		gap:32px;
+	}
+	
 	.block__container{
 		justify-content: center;
 		margin:0;
@@ -577,11 +746,7 @@ footer{
 		margin:40px 0 0 0;
 	}
 	
-	.gallery__block{
-		display:flex;
-		justify-content: center;
-		gap:32px;
-	}
+
 	
 	.gallery__card{
 		width:343px;
@@ -662,171 +827,3 @@ footer{
 		display:none;
 	}
 }  
-/* смартфоны и планшеты */
-@media (min-width:376px) and (max-width: 769px) {
-	.container {
-		max-width: 769px;
-		margin: 0 5%;
-	}
-
-	h1{
-		font-size: 44px;
-	}
-	blockquote{
-		font-size:20px;
-		width:359px;
-	}
-	h2{
-		font-size:24px;
-	}
-	.nowrap{
-		white-space: nowrap;
-	}
-
-	.maximum{
-		width:759px;
-		letter-spacing: 0%;
-	}
-
-	header{
-		padding:16px 32px;
-	}
-
-	.title{
-		width:100%;
-		height:100vh;
-		grid-template-columns: 1fr;
-	}
-
-	.content__block{
-		width: 100%;
-	}
-	.feauters__content{
-		flex-direction: column;
-		gap:48px;
-		width:360px;
-	}
-
-	.feauters{
-		width:769px;
-		height:610px;
-		background-color: #222224;
-		margin:64px 0 0 0;
-		display: flex;
-		align-items: center;
-	}
-	
-	.gallery__block{
-		display:flex;
-		justify-content: center;
-		gap:32px;
-	}
-	
-	.gallery__card{
-		width:343px;
-		height:247px;
-	}
-
-	.gallery__card__long{
-		height:111px;
-		width:343px
-	}
-	.gallery__text{
-		position:relative;
-		top:110px;
-	}
-	.gallery__text__long{
-		position:relative;
-		top:35px;
-	}
-	.buy{
-		margin:154px 0 0 0;
-	}
-	.docker{
-		gap:16px;
-		grid-template-columns:1fr 1fr;
-	}
-	.docker__image{
-		height: auto;
-	}
-
-	.flex-center{
-		display: flex;
-		justify-content: center;
-	}
-
-	.feauters{
-		width: 100%;
-		justify-content: center;
-	}
-
-	.subscribe{
-		width: 100%;
-	}
-	.subscribe__content{
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-evenly;
-	}
-	.subscribe__img{
-		width:96px;
-		height: 96px;
-	}
-
-	.footer__content{
-		padding:24px 0; 
-	}
-	.hidden-tab{
-		display:none;
-	}
-
-}
-
-/* Планшеты и маленькие ПК */
-@media (min-width:770px) and (max-width: 1599px) {
-	.container {
-		max-width: 1599px;
-		margin: 0 5%;
-	}
-	
-	.header{
-		padding:16px 5% 16px 5%;
-	}
-
-	.title{
-		width:100%;
-	}
-
-	.content_img{
-		max-width: 100%; 
-		padding:0 0 0 10%;
-	}
-
-	.gallery__card{
-		max-width:30%; 
-		background-position-x: center;
-	}
-	.docker__image{
-		height: auto;
-	}
-	.docker__info{
-		padding: 2%;
-	}
-
-	.gallery__card__long{
-		width: 100%;
-		background-repeat: repeat;
-	}
-	.hidden-tab2{
-		display:none;
-	}
-}
-
-
-/* Вопросы
-конфликт hidden-tab
-переместил вниз класс и заработало
-
-какая последовательность работы
-я для каждого медиа запроса одни и те же блоки переделываю каждый раз, вроде можно умнее?
-*/
